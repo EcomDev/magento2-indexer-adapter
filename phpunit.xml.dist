@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         timeoutForSmallTests="0.3"
+    >
+    <env>
+
+    </env>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+
+    <testsuites>
+        <testsuite name="all">
+            <directory suffix="Test.php">tests/</directory>
+        </testsuite>
+
+        <testsuite name="fast">
+            <directory suffix="Test.php">tests/</directory>
+            <groups>
+                <exclude>
+                    <group>medium</group>
+                    <group>large</group>
+                </exclude>
+            </groups>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DB_HOST" value="0.0.0.0"/>
+        <env name="DB_USER" value="root" />
+        <env name="DB_PASSWORD" value="root" />
+    </php>
+</phpunit>

@@ -1,0 +1,40 @@
+{
+    "name": "ecomdev/indexer-wrapper",
+    "description": "Indexer Wrapper for Magento",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Chepurnyi",
+            "email": "ivan.chepurnyi@ecomdev.org"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "EcomDev\\IndexerWrapper\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "EcomDev\\IndexerWrapper\\": ["tests/"]
+        }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "require-dev": {
+        "magento/framework": "^101.0",
+        "magento/zendframework1": "^1.13",
+        "phpunit/phpunit": "^6.4",
+        "phpunit/dbunit": "^3.0"
+    }
+}
