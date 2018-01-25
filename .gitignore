@@ -2,3 +2,4 @@
 /.idea/
 /phpunit.xml
 /bin/
+/tests/etc/connection.php

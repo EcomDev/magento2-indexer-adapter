@@ -1,0 +1,18 @@
+<?php
+/**
+ * Copyright © EcomDev B.V. All rights reserved.
+ * See LICENSE for license details.
+ */
+
+return [
+    'host' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'initStatements' => 'SET NAMES utf8',
+    'connections' => [
+        'default',
+        [
+            'other_connection_name' => 'oth_'
+        ]
+    ]
+];
